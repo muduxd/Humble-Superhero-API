@@ -7,6 +7,16 @@ This project is a simple API for managing superheroes, built using ExpressJs. It
 - **POST /superheroes**: Add a new superhero.
 - **GET /superheroes**: Fetch the list of superheroes sorted by humility score.
 
+Structure of a superhero: 
+```json
+{
+    "name": "<superheroName>",
+    "superpower": "<superpower>",
+    "humilityScore": 5
+}
+```
+
+
 ## Collaboration
 To collaborate with a teammate on this project, I would:
 1. Use version control (Git) to manage changes and ensure smooth collaboration.
@@ -22,5 +32,25 @@ If I had more time, I would:
 5. Add more comprehensive tests to cover edge cases.
 
 ## Running the project
-Backend:
-cd backend
+Start the backend running on port 8080:
+
+```bash
+npm run serve
+```
+
+Start the React client on port 3000:
+
+```bash
+npm start
+```
+
+Run the available unit tests in the backend using:
+
+```bash
+npm run test
+```
+Make sure to install the dependencies in the backend and frontend folders using:
+
+```bash
+npm install
+```

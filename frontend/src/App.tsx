@@ -15,8 +15,8 @@ export const App = () => {
 
   const fetchSuperheroes = async () => {
     try {
-      const response = await axiosInstance.get("/superheroes")
-      setSuperheroes(response.data as ISuperheroModel[]);
+      const response = await axiosInstance.get<ISuperheroModel[]>("/superheroes")
+      setSuperheroes(response.data);
     } catch (error) {
       console.error("Error fetching superheroes:", error);
     }
@@ -29,7 +29,7 @@ export const App = () => {
       setError("");
     } catch (err: unknown) {
       const error = err as Error;
-      setError(error.message || "An unexpected error occurred");
+      setError(error.message || "An unexpected error occurred!");
     }
   };
 
